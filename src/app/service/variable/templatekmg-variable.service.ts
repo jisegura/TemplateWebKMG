@@ -11,7 +11,7 @@ export class TemplatekmgVariableService {
   constructor() {
     this.template_variables = {
       Name: "KMG",
-      Logo: "/image/123.jpg"
+      Logo: "logo.svg"
     };
   }
 
