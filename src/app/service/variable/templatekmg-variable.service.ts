@@ -20,6 +20,6 @@ export class TemplatekmgVariableService {
   }
 
   public getLogo(): string{
-    return this.template_variables.Logo;
+    return "assets/images/" + this.template_variables.Logo;
   }
 }
