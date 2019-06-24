@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { KmgHomeComponent } from './kmg-home/kmg-home.component';
-import { KmgModulosComponent } from './kmg-modulos/kmg-modulos.component';
+import { KmgHomeComponent } from './component/kmg-home/kmg-home.component';
+import { KmgModuloComponent } from './component/kmg-modulo/kmg-modulo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KmgHomeComponent,
-    KmgModulosComponent
+    KmgModuloComponent
   ],
   imports: [
     BrowserModule,

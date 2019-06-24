@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KmgModulosComponent } from './kmg-modulos.component';
+import { KmgModuloComponent } from './kmg-modulo.component';
 
-describe('KmgModulosComponent', () => {
-  let component: KmgModulosComponent;
-  let fixture: ComponentFixture<KmgModulosComponent>;
+describe('KmgModuloComponent', () => {
+  let component: KmgModuloComponent;
+  let fixture: ComponentFixture<KmgModuloComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KmgModulosComponent ]
+      declarations: [ KmgModuloComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KmgModulosComponent);
+    fixture = TestBed.createComponent(KmgModuloComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
