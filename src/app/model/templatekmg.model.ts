@@ -1,4 +1,4 @@
-export class TemplateUrlKMG {
+export class TemplateWebKMG {
 
   public name: string;
   public logo: string;

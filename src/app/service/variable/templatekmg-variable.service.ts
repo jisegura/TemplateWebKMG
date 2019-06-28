@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
-import { TemplateUrlKMG } from '@app/model/templatekmg.model';
+import { TemplateWebKMG } from '@app/model/templatekmg.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TemplatekmgVariableService {
 
-  private template_variables: TemplateUrlKMG;
+  private template_variables: TemplateWebKMG;
 
   constructor() {
     this.template_variables = {
       name: "KMG",
       logo: "logo.svg"
-    } as TemplateUrlKMG;
+    } as TemplateWebKMG;
   }
 
   public getName(): string{
-    return this.template_variables.Name;
+    return this.template_variables.name;
   }
 
   public getLogo(): string{
-    return "assets/images/" + this.template_variables.Logo;
+    return "assets/images/" + this.template_variables.logo;
   }
 }
