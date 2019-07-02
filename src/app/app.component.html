@@ -4,6 +4,12 @@
   <nav>
     <a routerLink="/home">Home</a>
     <a routerLink="/modulo">Modulos</a>
+    <ng-container *ngFor="let link of templateService.getModulos()">
+      <a routerLink="/modulo" [queryParams]="setLinkParams(link)">{{ link.title }}</a>
+    </ng-container>
+    <ng-container *ngFor="let link of templateService.getModulos()">
+      <a [routerLink]="['/modulo', setLinkParams(link)]">{{ link.title }}</a>
+    </ng-container>
   </nav>
 </div>
 <router-outlet></router-outlet>
