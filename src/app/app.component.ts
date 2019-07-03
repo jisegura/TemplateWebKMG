@@ -12,8 +12,4 @@ export class AppComponent {
   constructor(
   	private templateService: TemplatekmgVariableService
   ) {}
-
-  setLinkParams(link):Object {
-  	return { name: link.getUrl() };
-  }
 }

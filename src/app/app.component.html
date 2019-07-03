@@ -1,10 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-kmg-navbar></app-kmg-navbar>
 <div style="text-align:center">
   <h1>{{title}}</h1>
   <nav>
     <a routerLink="/home">Home</a>
     <ng-container *ngFor="let modulo of templateService.getModulos()">
-      <a routerLink="/modulo" [queryParams]="setLinkParams(modulo)">{{ modulo.title }}</a>
+      <a routerLink="/module/{{ modulo.getUrl() }}">{{ modulo.title }}</a>
     </ng-container>
   </nav>
 </div>

@@ -1,20 +1,22 @@
 import { UrlFormatService } from '@app/service/method/url-format.service';
-import { ModuloKMG } from '@app/model/modulokmg.model';
+import { MenuKMG } from '@app/model/menukmg.model';
 
-export class TemplateWebKMG {
+export class ModuloKMG {
 
   private urlFormatService: UrlFormatService = new UrlFormatService();
 
   public title: string;
   private url: string;
-  public logo: string;
-  public models: ModuloKMG[];
+  public subtitle: string;
+  public image: string;
+  public menu: MenuKMG[];
 
-  constructor(title: string, logo: string, models: ModuloKMG[]) {
+  constructor(title: string, image: string, menu: MenuKMG[], subtitle?: string) {
     this.title = title;
     this.url = this.urlFormatService.formatUrl(this.title);
-    this.logo = logo;
-    this.models = models;
+    this.subtitle = subtitle;
+    this.image = image;
+    this.menu = menu;
   }
 
   getUrl(): string{
