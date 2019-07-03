@@ -7,7 +7,13 @@ import { KmgModuloComponent } from './component/kmg-modulo/kmg-modulo.component'
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: KmgHomeComponent },
-  { path: 'modulo', component: KmgModuloComponent }
+  {
+    path: 'modulo',
+    component: KmgModuloComponent,
+    children: [
+      { path: 'menu', component: KmgHomeComponent }
+    ]
+  }
 ];
 
 @NgModule({
