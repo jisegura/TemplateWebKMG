@@ -1,26 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-.dropdown {
-    .dropdown-menu {
-        opacity: 0;
-        visibility: hidden;
-        transform-origin: top;
-        animation-fill-mode: forwards;
-        transform: scale(0.7, 0.5) translateY(-5px);
-        display: block;
-        transition: all 0.3s ease;
-    }
-    &:hover {
-        .dropdown-menu {
-            transform: scale(1, 1) translateY(0);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-}
-
-
-.py-13 {
-  padding-bottom: 13px !important;
-  padding-top: 13px !important;
+body {
+	background-color: #EEE;
 }

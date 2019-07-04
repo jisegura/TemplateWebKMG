@@ -29,7 +29,7 @@ export class TemplatekmgVariableService {
     this.modelo_variable.push(new ModuloKMG("Forestación", "modelo-img.png", this.menu_variable));
     this.modelo_variable.push(new ModuloKMG("Apicultura", "modelo-img.png", this.menu2_variable));
     this.modelo_variable.push(new ModuloKMG("Administración Central", "modelo-img.png", this.menu_variable));
-    this.template_variables = new TemplateWebKMG("KMG", "logo.png", this.modelo_variable);
+    this.template_variables = new TemplateWebKMG("KMG", "logo.svg", this.modelo_variable);
   }
 
   public getTitle(): string{
