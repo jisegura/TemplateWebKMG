@@ -1,0 +1,10 @@
+aside {
+  display: inline-flex;
+
+  .nav-container {
+    margin: 25px;
+    width: 240px;
+    max-height: 75vh;
+    overflow: auto;
+  }
+}
