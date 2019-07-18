@@ -21,9 +21,12 @@ export class TemplatekmgVariableService {
     this.menu_variable.push(new MenuKMG("Menu 5", "google.com"));
     this.menu_variable.push(new MenuKMG("Menu 6", "google.com"));
     this.menu_variable.push(new MenuKMG("Menu 7", "google.com"));
-    this.menu2_variable.push(new MenuKMG("Menu 1", "google.com"));
+    
+    this.menu2_variable.push(new MenuKMG("Menu Apicola-1", "google.com"));
+    this.menu2_variable.push(new MenuKMG("Menu con Hijo", undefined, this.menu_variable))
     this.menu2_variable.push(new MenuKMG("Menu 2", "google.com"));
     this.menu2_variable.push(new MenuKMG("Menu 3", "google.com"));
+      
     this.modelo_variable.push(new ModuloKMG("Ganadería", "modelo-img.png", this.menu_variable));
     this.modelo_variable.push(new ModuloKMG("Agricultura", "modelo-img.png", this.menu_variable));
     this.modelo_variable.push(new ModuloKMG("Forestación", "modelo-img.png", this.menu_variable));
@@ -42,5 +45,15 @@ export class TemplatekmgVariableService {
 
   public getModulos(): ModuloKMG[] {
     return this.template_variables.models;
+  }
+
+  public getMenus(url: string): MenuKMG[] {
+    let salida: MenuKMG[];
+    this.modelo_variable.forEach(value => {
+      if (value.getUrl() == url) {
+        salida = value.menu;
+      }
+    });
+    return salida;
   }
 }

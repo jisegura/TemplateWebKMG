@@ -19,4 +19,8 @@ export class MenuKMG {
   getUrl(): string{
     return this.url;
   }
+
+  isLeaf(): boolean{
+    return this.submenu === undefined;
+  }
 }

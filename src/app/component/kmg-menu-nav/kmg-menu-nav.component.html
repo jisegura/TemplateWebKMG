@@ -2,98 +2,43 @@
   <div class="nav-container nav-scrollbar">
     <mat-accordion>
 
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 1
-        </mat-expansion-panel-header>
+      <ng-container *ngFor="let menu of menus">
+        
+          <ng-container *ngIf="menu.isLeaf()">
+            <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
+          </ng-container>
 
-        <mat-list>
-         <mat-list-item> <button mat-button >Pepper</button> </mat-list-item>
-         <mat-list-item> <button mat-button >Salt</button> </mat-list-item>
-         <mat-list-item> <button mat-button >Paprika</button> </mat-list-item>
-        </mat-list>
 
-      </mat-expansion-panel>
+          <ng-container *ngIf="!menu.isLeaf()">
 
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 2
-        </mat-expansion-panel-header>
+            <mat-expansion-panel class="rounded-0 noshadow mb2">
+              <mat-expansion-panel-header>
+                {{ menu.title }}
+              </mat-expansion-panel-header>
+              <mat-panel-description class="mr-0 ml-2">
+                <mat-accordion class="accordion-leaf">
+                  <mat-expansion-panel class="rounded-0 noshadow">
+                    <mat-expansion-panel-header>
+                      {{ menu.title }}
+                    </mat-expansion-panel-header>
+                    <mat-panel-description>
+                      <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
+                      <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
+                      <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
+                    </mat-panel-description>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-panel-description>
+            </mat-expansion-panel>
 
-        <a href="#">link 3</a>
+          </ng-container>
+        
 
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
 
-      </mat-expansion-panel>
 
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 3
-        </mat-expansion-panel-header>
-
-        <a href="#">link 3</a>
-
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
-
-      </mat-expansion-panel>
-
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 2
-        </mat-expansion-panel-header>
-
-        <a href="#">link 3</a>
-
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
-
-      </mat-expansion-panel>
-
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 2
-        </mat-expansion-panel-header>
-
-        <a href="#">link 3</a>
-
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
-
-      </mat-expansion-panel>
-
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 2
-        </mat-expansion-panel-header>
-
-        <a href="#">link 3</a>
-
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
-
-      </mat-expansion-panel>
-
-      <mat-expansion-panel class="rounded-0">
-        <mat-expansion-panel-header>
-          Menu 2
-        </mat-expansion-panel-header>
-
-        <a href="#">link 3</a>
-
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
-
-      </mat-expansion-panel>
-
-    </mat-accordion>
+      </ng-container>
+      </mat-accordion>
+    
 
   </div>
 </aside>
