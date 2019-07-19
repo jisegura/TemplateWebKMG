@@ -57,9 +57,9 @@ export class TemplatekmgVariableService {
     // Ventas
     this.menu_forestal_ventas.push(new MenuKMG("Cargar Base Ventas", "google.com"));
     this.menu_forestal_ventas.push(new MenuKMG("Cargar Toneladas", "google.com"));
-    this.menu_forestal_ventas.push(new MenuKMG("Cargar Toneladas", undefined, this.menu_forestal_ventas_porc_de_distribucion));
-    this.menu_forestal_ventas.push(new MenuKMG("Cargar Toneladas", undefined, this.menu_forestal_ventas_precios));
-    this.menu_forestal_ventas.push(new MenuKMG("Cargar Toneladas", undefined, this.menu_forestal_ventas_ventas));
+    this.menu_forestal_ventas.push(new MenuKMG("Procentaje de Distribución", undefined, this.menu_forestal_ventas_porc_de_distribucion));
+    this.menu_forestal_ventas.push(new MenuKMG("Precios", undefined, this.menu_forestal_ventas_precios));
+    this.menu_forestal_ventas.push(new MenuKMG("Ventas", undefined, this.menu_forestal_ventas_ventas));
 
     this.menu_forestal_ventas_porc_de_distribucion.push(new MenuKMG("Distribución de Clientes", "google.com"));
     this.menu_forestal_ventas_porc_de_distribucion.push(new MenuKMG("Distribución de Precios (Producto, Flete, Cosecha)", "google.com"));
