@@ -20,10 +20,7 @@ export class KmgMenuNavComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
-      console.log(params) //log the entire params object
-      console.log(params['id']) //log the value of id4
       this.menus = this.templateService.getMenus(params['id']);
-      console.log(this.menus);
     });
   }
 

@@ -23,4 +23,8 @@ export class MenuKMG {
   isLeaf(): boolean{
     return this.submenu === undefined;
   }
+
+  getSubmenu(): MenuKMG[]{
+    return this.submenu;
+  }
 }

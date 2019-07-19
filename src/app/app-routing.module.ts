@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'module/:id',
     component: KmgModuloComponent,
     children: [
-      { path: 'menu', component: KmgMenuViewerComponent }
+      { path: 'menu/:id', component: KmgMenuViewerComponent }
     ]
   }
 ];

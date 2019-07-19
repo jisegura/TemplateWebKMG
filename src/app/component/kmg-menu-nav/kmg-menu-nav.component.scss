@@ -31,6 +31,11 @@ aside {
 	margin: 8px 0;
 }
 
+::ng-deep .mat-expansion-panel-content {
+  background: #eee;
+  padding-top: 2px;
+}
+
 ::ng-deep .mat-expansion-panel-body {
   padding: 0 !important;
 }

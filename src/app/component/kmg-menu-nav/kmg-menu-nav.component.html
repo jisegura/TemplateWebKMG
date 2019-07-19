@@ -5,7 +5,7 @@
       <ng-container *ngFor="let menu of menus">
         
           <ng-container *ngIf="menu.isLeaf()">
-            <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
+            <button mat-raised-button routerLink="menu/{{ menu.getUrl() }}" class="rounded-0 nav-btn">{{ menu.title }}</button>
           </ng-container>
 
 
@@ -16,18 +16,37 @@
                 {{ menu.title }}
               </mat-expansion-panel-header>
               <mat-panel-description class="mr-0 ml-2">
+
                 <mat-accordion class="accordion-leaf">
-                  <mat-expansion-panel class="rounded-0 noshadow">
-                    <mat-expansion-panel-header>
-                      {{ menu.title }}
-                    </mat-expansion-panel-header>
-                    <mat-panel-description>
-                      <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
-                      <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
-                      <button mat-raised-button class="rounded-0 nav-btn">{{ menu.title }}</button>
-                    </mat-panel-description>
-                  </mat-expansion-panel>
+                  <ng-container *ngFor="let submenu of menu.getSubmenu()">
+                    
+                    <ng-container *ngIf="submenu.isLeaf()">
+                      <button mat-raised-button routerLink="menu/{{ submenu.getUrl() }}" class="rounded-0 nav-btn">{{ submenu.title }}</button>
+                    </ng-container>
+
+                    <ng-container *ngIf="!submenu.isLeaf()">
+                      <mat-expansion-panel class="rounded-0 noshadow mb2">
+                        <mat-expansion-panel-header>
+                          {{ submenu.title }}
+                        </mat-expansion-panel-header>
+                        <mat-panel-description class="mr-0 ml-2">
+
+                          <mat-accordion class="accordion-leaf">
+                            <ng-container *ngFor="let lastsubmenu of submenu.getSubmenu()">
+                           
+                              <button mat-raised-button routerLink="menu/{{ lastsubmenu.getUrl() }}" class="rounded-0 nav-btn">{{ lastsubmenu.title }}</button>
+                        
+                            </ng-container>
+                          </mat-accordion>
+
+                        </mat-panel-description>
+                      </mat-expansion-panel>
+                    </ng-container>
+
+                  </ng-container>
                 </mat-accordion>
+                
+
               </mat-panel-description>
             </mat-expansion-panel>
 
