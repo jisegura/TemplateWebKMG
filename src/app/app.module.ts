@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -33,6 +34,7 @@ import { KmgMenuViewerComponent } from './component/kmg-menu-viewer/kmg-menu-vie
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatGridListModule,
     MatExpansionModule,
     MatListModule,
     MatToolbarModule,
