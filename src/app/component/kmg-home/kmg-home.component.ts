@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TemplatekmgVariableService } from '@app/service/variable/templatekmg-variable.service';
 
 @Component({
   selector: 'app-kmg-home',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KmgHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private templateService: TemplatekmgVariableService
+  ) { }
 
   ngOnInit() {
   }
