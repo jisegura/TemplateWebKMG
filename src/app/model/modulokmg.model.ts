@@ -10,6 +10,7 @@ export class ModuloKMG {
   public subtitle: string;
   public image: string;
   public menu: MenuKMG[];
+  public resolution: number;
 
   constructor(title: string, image: string, menu: MenuKMG[], subtitle?: string) {
     this.title = title;
