@@ -1,0 +1,34 @@
+<div class="sidenav_container"  [@onSideNavChange]="dashboardChange ? 'open' : 'close'">
+  <div style="height: 100%;">
+
+    <div class="user_menu">
+      <mat-nav-list>
+        <a mat-list-item>
+          <img class="jim" src="https://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/06/21/931/524/694940094001_5800293009001_5800284148001-vs.jpg?ve=1&tl=1" alt="">
+          <span [@animateText]="linkText ? 'show' : 'hide'">Jim </span>
+        </a>
+      </mat-nav-list>
+      <mat-divider></mat-divider>
+    </div>
+
+    <div class="dashboard-nav-wrapper">
+      <ul class="dashboard-nav">
+        <li *ngFor="let menu of menus" class="dashboard-nav-item">
+          <button mat-flat-button color="primary" routerLink="menu/{{ menu.getId() }}" [routerLinkActive]="['background','nocolor']" class="nav-btn">
+            <mat-icon>favorite</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'">{{ menu.title }} </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="spacer"></span>
+  <div style="padding: 0px 10px;">
+    <button mat-icon-button>
+      <mat-icon *ngIf="dashboardChange">favorite</mat-icon>
+      <mat-icon *ngIf="!dashboardChange">home</mat-icon>
+    </button>
+  </div>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="index-background">
+
+  <mat-toolbar color="primary">
+    <div class="logo d-flex justify-content-between align-items-center w-100">
+      <a href="#">
+        <img src="{{ templateService.getLogo() }}" width="auto" height="50" alt="">
+      </a>
+      <h1>{{ templateService.getTitle() }}</h1>
+      <div class="vhidden">
+        <img src="{{ templateService.getLogo() }}" width="auto" height="50" alt="">
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <div class="index-conteiner">
+
+    <div class="container mt-5 mb-5">
+      <mat-grid-list cols="24" rowHeight="50px">
+
+        <ng-container *ngFor="let modulo of templateService.getModulos()">
+
+          <mat-grid-tile
+            [colspan]="12"
+            [rowspan]="4">
+            <div class="kmg-index-card w-100 h-100">
+              <button mat-button
+                      [routerLink]="['/module', modulo.getId() ]"
+                      (mouseenter)="mouseEnter(modulo.getId())"
+                      (mouseleave)="mouseLeave(modulo.getId())"
+                      class="w-100 h-100">
+                <mat-card class="background primary w-100 h-100">
+                  <mat-card-content class="d-flex justify-content-between align-items-center w-100 h-100">
+                    <div class="img-box">
+                      <img class="icon" src="{{ modulo.getImage() }}" alt="Photo of a Shiba Inu">
+                    </div>
+                    <div class="text-box">
+                      <h3 [@collapse]="condition[modulo.getId()] && modulo.hasComments()">{{ modulo.title }}</h3>
+                      <ng-container *ngIf="modulo.hasComments()">
+                        <span *ngIf="condition[modulo.getId()]" [@fadeInOnEnter]>{{ modulo.subtitle }}</span>
+                      </ng-container>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              </button>
+            </div>
+          </mat-grid-tile>
+
+        </ng-container>
+
+      </mat-grid-list>
+    </div>
+
+  </div>
+
+</div>

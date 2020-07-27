@@ -1,8 +1,43 @@
-<div class="mt-56">
+<!--<mat-drawer-container autosize>
+  <mat-drawer #drawer opened mode="side">
+    <p>Auto-resizing sidenav</p>
+    <button mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
 
-<app-kmg-page-header></app-kmg-page-header>
+  <div>
+    <div>
 
-<app-kmg-menu-nav></app-kmg-menu-nav>
-<router-outlet></router-outlet>
+      <app-kmg-page-header></app-kmg-page-header>
+
+      <app-kmg-menu-nav></app-kmg-menu-nav>
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+
+</mat-drawer-container> -->
+
+
+<div>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()" class="bgimg-center border-0">
+      <div class="background primary layerbackgound">
+        <!--<app-left-menu></app-left-menu> -->
+        <app-kmg-modulo-dashboard></app-kmg-modulo-dashboard>
+      </div>
+    </mat-sidenav>
+    <!--<mat-sidenav-content [@onMainContentChange]="onSideNavChange ? 'open': 'close'"> -->
+    <mat-sidenav-content [@onMainContentChange]="dashboardChange ? 'open': 'close'">
+      <div class="main_content">
+        <app-kmg-modulo-toolbar></app-kmg-modulo-toolbar>
+        <div style="padding: 20px">
+          Your content2
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 
 </div>

@@ -1,0 +1,17 @@
+.bgimg-center {
+  background-image: url(../../../assets/images/_data.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+
+  .layerbackgound {
+    height: 100%;
+    opacity: 0.95;
+  }
+}
+
+.main_content {
+  width:100%; 
+  height: 100vh; 
+  background: #efefef;
+}

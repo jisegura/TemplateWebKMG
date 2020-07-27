@@ -1,0 +1,56 @@
+.sidenav_container {
+  min-width: 60px; 
+  height: calc(100vh - 100px);
+
+  .dashboard-nav-wrapper {
+    position: relative;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .dashboard-nav {
+      margin-top: 15px;
+      display: block;
+      flex-wrap: wrap;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      list-style: none;
+
+      .dashboard-nav-item {
+        margin-top: 8px;
+        padding: 0px 8px;
+        position: relative;
+
+        &:first-child {
+          margin-top: 0px !important;
+        }
+
+        .nav-btn {
+          text-align: left;
+          width: 100%;
+
+          mat-icon {
+            margin: 4px;
+          }
+
+          span {
+            margin: 0px 0px 0px 4px;
+            line-height: 16px;
+            font-size: 14px;
+            position: relative;
+            height: auto;
+            width: calc(100% - 32px);
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.jim {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}

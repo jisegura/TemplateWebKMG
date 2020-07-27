@@ -1,0 +1,113 @@
+<div>
+  <div class="fixed-top">
+    <div class="bgimg-center border-0">
+      <div class="background primary opacity layerbackgound">
+        <div class="d-flex align-items-center justify-content-center h-100">
+          <mat-card>
+            <mat-card-content>
+
+              <form [formGroup]="logInForm"
+                    #formDirective="ngForm"
+                    (ngSubmit)="onSubmit(logInForm, formDirective)">
+
+              <!--  <div class="form-wrapper">
+                  <div class="form-row">
+                    <div class="header-img-box">
+                      <img src="assets/images/logo.png" class="img-fluid" alt="logo">
+                    </div>
+                  </div> 
+                </div> -->
+
+                <div class="form-wrapper">
+
+                  <div class="form-row">
+                    <mat-form-field appearance="fill"
+                                    color="accent">
+                      <mat-label>TM1 server</mat-label>
+                      <mat-select formControlName="tm1server"
+                                  disableOptionCentering>
+                        <mat-option value="ngo">NGO</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="form-row">
+                    <mat-form-field appearance="fill"
+                                    color="accent">
+                      <mat-label>User Name</mat-label>
+                      <input matInput
+                             formControlName="username"
+                             type="text">
+                    </mat-form-field>
+                  </div>
+
+                  <div class="form-row">
+                    <mat-form-field appearance="fill"
+                                    color="accent">
+                      <mat-label>Password</mat-label>
+                      <input matInput
+                             formControlName="password"
+                             [type]="hide ? 'password' : 'text'">
+                      <button mat-icon-button
+                              matSuffix
+                              (click)="hide = !hide"
+                              type="button">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </div>
+
+                </div>
+
+                <div class="form-submit">
+
+                  <button mat-flat-button
+                          class="btn-spinner rounded-0"
+                          type="submit"
+                          color="accent"
+                          [disabled]="isDisabled()"
+                          [disableRipple]="submitted"
+                          [class.submitted]="submitted">
+                    <span [hidden]="submitted">Login</span>
+                    <mat-progress-spinner *ngIf="submitted"
+                                          mode="indeterminate"
+                                          diameter="20"></mat-progress-spinner>
+                  </button>
+
+                </div>
+
+                <div class="form-wrapper">
+                  <div class="form-row">
+                    <div class="copyright-bottom">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-1">
+                          <div class="img-logos-box">
+                            <div class="img-box ibmlogo">
+                              <img src="assets/images/IBM_logo.png" class="img-fluid" alt="IBM logo">
+                            </div>
+                            <div class="img-box kmglogo">
+                              <img src="assets/images/KMG_logo.png" class="img-fluid" alt="KMG logo">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-100">
+                          <span>
+                            Licensed Materials - Property of IBM Corp.
+                          </span>
+                          <br>
+                          <span>
+                            © Licensed Materials - Property of IBM Corp. © Copyright IBM Corporation and other(s) 2007, 2018. IBM, the IBM logo, ibm.com, Cognos and TM1 are trademarks or registered trademarks of International Business Machines Corp., registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

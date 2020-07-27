@@ -5,19 +5,33 @@ export class TemplateWebKMG {
 
   private urlFormatService: UrlFormatService = new UrlFormatService();
 
+  private idserie: number;
   public title: string;
   private url: string;
   public logo: string;
-  public models: ModuloKMG[];
+  public modulo: ModuloKMG[];
 
-  constructor(title: string, logo: string, models: ModuloKMG[]) {
+  constructor() {
+    this.idserie = 0;
+    this.modulo = [];
+  }
+
+  setTitle(title: string): void {
     this.title = title;
-    this.url = this.urlFormatService.formatUrl(this.title);
+    this.url = this.urlFormatService.formatUrl(title);
+  }
+
+  setLogo(logo: string): void {
     this.logo = logo;
-    this.models = models;
   }
 
   getUrl(): string{
     return this.url;
+  }
+
+  addModulo(modulo: ModuloKMG): void {
+    this.idserie = this.idserie + 1;
+    modulo.setId(this.idserie);
+    this.modulo.push(modulo);
   }
 }

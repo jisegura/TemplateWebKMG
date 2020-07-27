@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~material-design-icons/iconfont/material-icons.css";
+
 
 body {
-background-color: #EEE;
+  background-color: #EEE;
+}
+
+.index-background {
+  background-image: url(assets/images/background-main.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .mt-56 {
@@ -10,22 +18,30 @@ background-color: #EEE;
 
 /* width */
 .nav-scrollbar::-webkit-scrollbar {
-    width: 4px;
+  width: 4px;
 }
 
 /* Track */
 .nav-scrollbar::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 4px transparent; 
-    border-radius: 0px;
+  box-shadow: inset 0 0 4px transparent; 
+  border-radius: 0px;
 }
 
 /* Handle */
 .nav-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,.54); 
-    border-radius: 0px;
+  background: rgba(0,0,0,.54); 
+  border-radius: 0px;
 }
 
 /* Handle on hover */
 .nav-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,.54); 
+  background: rgba(0,0,0,.54); 
+}
+
+.cdk-overlay-container {
+  z-index: 9999 !important;
+}
+
+button:focus {
+  outline: none !important;
 }
